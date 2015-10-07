@@ -1,6 +1,24 @@
 {
-    "name": "angular-img-liquid",
-    "dependencies": {
-
-    }
+  "name": "angular-img-liquid",
+  "description": "Angular directive image liquid",
+  "version": "0.0.0",
+  "authors": [
+    "Tushar Borole <tushariscoolster@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tushariscoolster/angular-img-liquid"
+  },
+  "homepage": "http://tushariscoolster.github.io/angular-img-liquid/",
+  "license": "LGPL-2.1",
+  "main": "angular-img-liquid.js",
+  "keywords": ["imgliquid",
+               "angular"
+  ],
+  "ignore": [
+    "gh-pages",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {}
 }
