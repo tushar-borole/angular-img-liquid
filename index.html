@@ -12,8 +12,10 @@
 
 <body>
     <div ng-controller="demoController" class="image-container">
+        <input ng-click="image1=image2" type="button" value="change"/>
+        <input ng-click="image1='http://www.gettyimages.in/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_9583.jpg'" type="button" value="Error Image"/>
         <div imgliquid imgliquid-option="check" class="image1">
-            <img src="https://www.ebi.ac.uk/interpro/potm/2003_2/Page_1_filesimage004.jpg" />
+            <img ng-src="{{image1}}"  />
         </div>
 
 
@@ -46,11 +48,16 @@
                 ////////////////
 
                 function activate() {
+                    
+                    $scope.defaultImage="http://www.paolobugatti.com/img/img-default.png"
+                    $scope.image1="http://www.ecs.umass.edu/mie/tcfd/Programs/picture3.JPG"
+                    $scope.image2="http://www.gettyimages.in/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg"
                     $scope.check = {
                         "fill": true,
-                        "useBackgroundSize":false,
+                        "useBackgroundSize": false,
                         onItemError: function (index, container, img) {
                             console.log(img)
+                            img.attr("src",$scope.defaultImage)
                         }
                     }
 
